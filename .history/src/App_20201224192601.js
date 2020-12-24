@@ -11,7 +11,6 @@ import SignIn from "./Components/Authentication/SignIn";
 import NotFound from "./Components/NotFound/NotFound";
 import Home from "./Components/Pages/Home/Home";
 import Editing from "./Components/Pages/Share/Editing/Editing";
-import Navigation from "./Components/Pages/Share/Navigation/Navigation";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
@@ -24,25 +23,14 @@ function App() {
   return (
    <UserContext.Provider value={[loginUser,setLoginUser]}>
     <Router>
-       <Switch> 
-         <PrivateRoute path='/home'>
-           <Home></Home>
-         </PrivateRoute>
-
-        <PrivateRoute path='/order-editing'>
-               <Navigation></Navigation>
+       <Switch>
+         <Route path='/home' component={Home}/>
+           <PrivateRoute path='/order-editing'>
                <Editing></Editing>
-        </PrivateRoute>
+           </PrivateRoute>
+         <Route path='/sign-in' component={SignIn}/>
+         <Route exact path='/' component={Home}/>
 
-        <Route path='/sign-in'>
-              <Navigation></Navigation>
-              <SignIn/>
-         </Route>
-
-         <PrivateRoute exact path='/'>
-             <Home></Home>
-         </PrivateRoute>
-         
        </Switch>
     </Router>
    </UserContext.Provider>

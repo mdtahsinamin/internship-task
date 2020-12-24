@@ -38,11 +38,11 @@ function App() {
               <Navigation></Navigation>
               <SignIn/>
          </Route>
-
+         
          <PrivateRoute exact path='/'>
              <Home></Home>
          </PrivateRoute>
-         
+
        </Switch>
     </Router>
    </UserContext.Provider>

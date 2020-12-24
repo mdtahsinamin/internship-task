@@ -24,25 +24,18 @@ function App() {
   return (
    <UserContext.Provider value={[loginUser,setLoginUser]}>
     <Router>
-       <Switch> 
-         <PrivateRoute path='/home'>
-           <Home></Home>
-         </PrivateRoute>
+       <Switch>
+         <PrivateRoute path='/home' component={Home}/>
 
-        <PrivateRoute path='/order-editing'>
+           <PrivateRoute path='/order-editing'>
                <Navigation></Navigation>
                <Editing></Editing>
-        </PrivateRoute>
+           </PrivateRoute>
 
-        <Route path='/sign-in'>
-              <Navigation></Navigation>
-              <SignIn/>
-         </Route>
-
-         <PrivateRoute exact path='/'>
-             <Home></Home>
-         </PrivateRoute>
+         <Route path='/sign-in' component={SignIn}/>
          
+         <PrivateRoute exact path='/' component={Home}/>
+
        </Switch>
     </Router>
    </UserContext.Provider>

@@ -1,0 +1,20 @@
+.login-button{
+     padding:5px 10px;
+     background:#5E5BFB;
+}
+
+.login-button:hover{
+     background:rgb(77, 82, 77);
+     color:#ffff;
+}
+.profile-pic img{
+		width: 40px;
+		border-radius: 50%;
+		margin-left: 8px;
+}
+.navbar-brand{
+	width: 130px;
+}
+.navbar a {
+	font-weight: 500;
+}
