@@ -1,0 +1,15 @@
+.search-input{
+ width: 18.25em;
+ height: 3.125em;
+ padding: 0 5px;
+ background: #FFFFFF;
+ border: 1px solid #E5E5E5;
+ border-radius: 10px;
+ margin-top: 5px;
+ margin-bottom:15px;
+}
+.btn-search{
+    height: 3.125em;
+    margin-left:10px;
+    border-radius: 10px;
+}
