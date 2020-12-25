@@ -32,7 +32,7 @@ const Home = () => {
               <Dropdown>
                     <Dropdown.Toggle variant="info btn-lg" id="dropdown-basic">
                     <span style={{fontSize:'20px',marginRight:'10px'}}><FaOpencart/></span>
-                    <span className="badge badge-light">{ordersLength}</span>
+                    <span className="badge badge-light">{orders.length}</span>
                     </Dropdown.Toggle>
                 </Dropdown>
             </div>

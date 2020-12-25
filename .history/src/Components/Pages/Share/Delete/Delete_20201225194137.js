@@ -1,17 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../../../App';
 
 const Delete = ({orderId,orderIndex}) => {
     const { register, handleSubmit, watch, errors } = useForm();
     const [loginUser,setLoginUser] = useContext(UserContext);
-    const history = useHistory();
-    const location = useLocation();
-    
-    let { from } = { from: { pathname: "/" } };
 
-    const {orders,ordersLength,count} = loginUser;
+    const {orders} = loginUser;
 
     const styles = {
         position: 'relative',
@@ -40,8 +35,8 @@ const Delete = ({orderId,orderIndex}) => {
     }
     const onSubmit = data => {
         delete orders[Number(orderIndex)];
+        console.log(orders);
         alert('Order Deleted');
-        history.replace(from);
     };
     return (
         <div style={styles}>

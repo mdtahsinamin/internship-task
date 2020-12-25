@@ -9,9 +9,9 @@ const Delete = ({orderId,orderIndex}) => {
     const history = useHistory();
     const location = useLocation();
     
-    let { from } = { from: { pathname: "/" } };
+    let { from } =location.state || { from: { pathname: "/" } };
 
-    const {orders,ordersLength,count} = loginUser;
+    const {orders,ordersLength} = loginUser;
 
     const styles = {
         position: 'relative',
@@ -40,6 +40,7 @@ const Delete = ({orderId,orderIndex}) => {
     }
     const onSubmit = data => {
         delete orders[Number(orderIndex)];
+        
         alert('Order Deleted');
         history.replace(from);
     };

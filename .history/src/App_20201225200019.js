@@ -20,10 +20,10 @@ export const UserContext = createContext();
 
 function App() {
    const [orders,setOrders] = useState(DummyData);
-   const count = 0;
    const [loginUser,setLoginUser] = useState({
      orders,
      ordersLength: orders.length,
+     count: 0
    });
 
   return (

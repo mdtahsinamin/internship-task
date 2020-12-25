@@ -41,6 +41,7 @@ const Delete = ({orderId,orderIndex}) => {
     const onSubmit = data => {
         delete orders[Number(orderIndex)];
         alert('Order Deleted');
+        setLoginUser(count+1)
         history.replace(from);
     };
     return (

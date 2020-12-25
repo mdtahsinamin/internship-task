@@ -24,6 +24,7 @@ function App() {
    const [loginUser,setLoginUser] = useState({
      orders,
      ordersLength: orders.length,
+     count: count
    });
 
   return (

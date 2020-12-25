@@ -11,7 +11,7 @@ const Delete = ({orderId,orderIndex}) => {
     
     let { from } = { from: { pathname: "/" } };
 
-    const {orders,ordersLength,count} = loginUser;
+    const {orders,ordersLength} = loginUser;
 
     const styles = {
         position: 'relative',
