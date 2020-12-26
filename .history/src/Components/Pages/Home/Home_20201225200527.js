@@ -7,8 +7,7 @@ import Pagination from '../Share/Pagination/Pagination';
 import { Dropdown } from 'react-bootstrap';
 import {FaOpencart} from 'react-icons/fa';
 const Home = () => {
-
-    
+     // state hooks
     //const [currentPage,setCurrentPage] = useState(1);
    // const [orderPerPage,setOrderPerPage] = useState(50);
   
