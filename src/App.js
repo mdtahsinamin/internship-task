@@ -15,6 +15,7 @@ import Editing from "./Components/Pages/Share/Editing/Editing";
 import Event from "./Components/Pages/Share/Event/Event";
 import Navigation from "./Components/Pages/Share/Navigation/Navigation";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import NotFound from "./Components/NotFound/NotFound";
 export const UserContext = createContext();
 
 function App() {
@@ -54,10 +55,13 @@ function App() {
              <Contact></Contact>
          </Route>
 
+         <Route path='*'>
+             <NotFound></NotFound>
+         </Route>
+
          <PrivateRoute exact path='/'>
              <Home></Home>
          </PrivateRoute>
-
        </Switch>
     </Router>
    </UserContext.Provider>

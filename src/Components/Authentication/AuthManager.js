@@ -22,7 +22,6 @@ export const continueWithGoogle = () =>{
         return googleUser;
     }).catch((error)=> {
         console.log(error);
-        
     });
 
 }
